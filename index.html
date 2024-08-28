@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Responsivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img class="imagem_logo" src="imagens/logo.png" alt="imagem_logo">
+            <h1 class="nomee">Novak Letreiros</h1>
+        </div>
+        <nav>
+            <button id="menu_botao" class="menu_botao">☰</button>
+            <ul id="menu" class="menu">
+                <li><a class="mudarcor" onmouseover="vai(this)" onmouseout="volta(this)" href="#home">Home</a></li>
+                <li><a class="mudarcor" onmouseover="vai(this)" onmouseout="volta(this)" href="#servicos">Serviços</a></li>
+                <li><a class="mudarcor" onmouseover="vai(this)" onmouseout="volta(this)" href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content" id="home">
+            <div class="imagem-container">
+                <img class="imagem_apresentacao" src="imagens/gif1.gif" alt="imagem_apresentacao">
+                <p class="titulo">Bem-vindo ao nosso site!<br>Novak Letreiros é uma empresa especializada em ferragem. O principal produto é letreiros de ferro, onde fazemos desde a produção até a instalação do produto</p>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const imgElement = document.querySelector('.imagem_apresentacao');
+                const gifs = ['imagens/gif1.gif', 'imagens/gif2.gif'];
+                let currentGifIndex = 0;
+        
+                function changeGif() {
+                    currentGifIndex = (currentGifIndex + 1) % gifs.length;
+                    imgElement.src = gifs[currentGifIndex];
+                }
+        
+                // Alterna o GIF a cada 3 segundos (3000 milissegundos)
+                setInterval(changeGif, 3000);
+            });
+        </script>
+        
+        <section class="content" id="servicos">
+            <h1>Serviços: </h1>
+            <div class="conjunto_de_imagens">
+                <img src="imagens/1.jpg" alt="Imagem 1">
+                <img src="imagens/2.jpg" alt="Imagem 2">
+                <img src="imagens/3.jpg" alt="Imagem 3">
+                <img src="imagens/4.jpg" alt="Imagem 4">
+                <img src="imagens/5.jpg" alt="Imagem 5">
+                <img src="imagens/6.jpg" alt="Imagem 6">
+                <img src="imagens/7.jpg" alt="Imagem 7">
+                <img src="imagens/8.jpg" alt="Imagem 8">
+                <img src="imagens/9.jpg" alt="Imagem 9">
+                <img src="imagens/10.jpg" alt="Imagem 10">
+                <img src="imagens/11.jpg" alt="Imagem 11">
+                <img src="imagens/12.jpg" alt="Imagem 12">
+                <img src="imagens/13.jpg" alt="Imagem 13">
+                <img src="imagens/14.jpg" alt="Imagem 14">
+                <img src="imagens/15.jpg" alt="Imagem 15">
+                <img src="imagens/16.jpg" alt="Imagem 16">
+                <img src="imagens/17.jpg" alt="Imagem 17">
+                <img src="imagens/18.jpg" alt="Imagem 18">
+                <img src="imagens/19.jpg" alt="Imagem 19">
+                <img src="imagens/20.jpg" alt="Imagem 20">
+                <img src="imagens/21.jpg" alt="Imagem 21">
+                
+  
+
+                <!-- Adicione quantas imagens quiser aqui -->
+            </div>
+            <div class="botoes">
+                <button id="verMais">Ver Mais</button>
+                <button id="voltar" style="display: none;">Voltar</button>
+            </div>
+        </section>
+
+        <section class="content" id="contato">
+            <h1>Entre em contato com a Almeida Ferragens</h1>
+            <form id="contactForm">
+                <div class="formulario">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="opcional" required>
+                </div>
+                <div class="formulario">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Obrigatório" required>
+                </div>
+                <div class="formulario">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone"  placeholder="(xx) xxxx-xxxx" required>
+                </div>
+                <div class="formulario">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="formulario">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="formulario">
+                    <button type="button" id="submitBtn">Enviar</button>
+                </div>
+            </form>
+        </section>
+    
+        <script>
+            document.getElementById('submitBtn').addEventListener('click', function(event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+                
+                // Captura os dados do formulário
+                var name = encodeURIComponent(document.getElementById('name').value);
+                var email = encodeURIComponent(document.getElementById('email').value);
+                var phone = encodeURIComponent(document.getElementById('phone').value);
+                var subject = encodeURIComponent(document.getElementById('subject').value);
+                var message = encodeURIComponent(document.getElementById('message').value);
+                
+                // Formata a mensagem para o WhatsApp
+                var whatsappMessage = `Nome: ${name}%0AEmail: ${email}%0ATelefone: ${phone}%0AAssunto: ${subject}%0AMensagem: ${message}`;
+                
+                // Cria o link do WhatsApp
+                var whatsappLink = `https://wa.me/5551985109343?text=${whatsappMessage}`;
+                
+                // Redireciona para o link do WhatsApp
+                window.location.href = whatsappLink;
+            });
+        </script>
+
+
+
+    </main>
+    <footer>
+        <a href="https://www.instagram.com/mdprestacoesdeservicos/" class="link-estilizado">&copy; Site feito por MD prestações de serviços</a>    
+   </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,373 @@
+.formulario{            
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o logo e o nome */
+}
+
+.imagem_logo {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.nomee {
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    margin: 0;
+}
+.link-estilizado {
+ 
+   text-decoration: none; /* Remove o sublinhado */
+    color: #ffffff; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    padding: 10px; /* Espaçamento ao redor do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+.link-estilizado:hover {
+    color: #0073e6; /* Cor do texto ao passar o mouse */
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+
+.conjunto_de_imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta o número de colunas automaticamente */
+    gap: 15px; /* Espaço entre as imagens */
+    justify-items: center; /* Centraliza as imagens horizontalmente dentro de cada célula da grid */
+}
+
+.conjunto_de_imagens img {
+    max-width: 80%; /* Define um tamanho máximo para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.message {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+    resize: none; /* Impede que o usuário redimensione a caixa de texto */
+    max-height: 150px; /* Define uma altura máxima para a caixa de texto */
+}
+
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 2; /* Garante que o cabeçalho e o rodapé estejam acima de outros elementos */
+}
+
+h1 {
+    position: relative;
+    top: 2px;
+    font-size: 24px;
+}
+
+/* Container da Imagem */
+.imagem-container {
+    position: relative; /* Permite ajustar a posição dos elementos sobre a imagem */
+    text-align: center; /* Centraliza o conteúdo textual e as imagens dentro da seção */
+}
+
+/* Imagem de Apresentação */
+.imagem_apresentacao {
+    width: 100%; /* Ajusta a largura da imagem ao contêiner */
+    max-width: 1000px; /* Define um tamanho máximo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 1; /* Define a imagem abaixo dos elementos sobrepostos */
+}
+
+/* Título sobre a Imagem */
+.titulo {
+    position: absolute; /* Posiciona o título sobre a imagem */
+    top: 65%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
+    font-style: italic;
+    color: white; /* Ajusta a cor do texto dentro do conteúdo */
+    background-color: rgba(110, 155, 227, 0.9); /* Cor preta com 50% de transparência */
+    padding: 10px; /* Adiciona espaçamento interno */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao fundo do título */
+    width: 80%; /* Ajusta a largura do título */
+
+    z-index: 2; /* Garante que o título esteja sobre a imagem */
+}
+
+/* Conteúdo Principal */
+.content {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o Menu */
+nav {
+    position: absolute; /* Garante que o menu flutue sobre outros elementos */
+    top: 0;
+    width: 96%;
+    z-index: 3; /* Garante que o menu esteja sobre a imagem e outros elementos */
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #444;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+.menu_botao {
+    display: none;
+}
+
+/* Estilos para dispositivos grandes (computadores) */
+@media (min-width: 1024px) {
+
+    .conjunto_de_imagens {
+        grid-template-columns: repeat(2, 1fr); /* Força duas colunas em dispositivos grandes */
+    }
+
+
+    body {
+        background-color: #e0e0e0;
+    }
+
+    header, footer {
+        text-align: left;
+        padding: 20px 40px;
+    }
+
+    .content {
+        max-width: 1200px;
+        padding: 40px;
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    .menu {
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+
+    .menu li a {
+        padding: 40px 10px;
+       
+    }
+}
+
+/* Estilos para dispositivos médios (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens dentro do cabeçalho */
+        padding: 10px;
+        
+    }
+    
+    .imagem_logo {
+        width: 15%; /* Ajusta a largura do logo para dispositivos móveis */
+        max-width: 200px; /* Define um tamanho máximo para a largura do logo */
+        margin-left: 40px; /* Move a imagem para a direita */
+        
+    }
+
+    h1.nomee {
+        margin: 10px 0; /* Adiciona uma margem ao redor do nome */
+        font-size: 20px; /* Ajusta o tamanho da fonte do nome */
+    }
+    .link-estilizado {
+
+         font-size: 10px; /* Tamanho da fonte */
+    }
+
+    .conjunto_de_imagens {
+        grid-template-columns: repeat(2, 1fr); /* Força duas colunas em dispositivos médios */
+    }
+    .titulo{
+        font-size: 11px;
+    }
+    header, footer {
+        padding: 15px 30px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .menu li a {
+        padding: 10px 15px;
+    }
+}
+
+/* Estilos para dispositivos pequenos (celulares) */
+@media (max-width: 767px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens dentro do cabeçalho */
+        padding: 10px;
+        
+    }
+    
+    .imagem_logo {
+        width: 15%; /* Ajusta a largura do logo para dispositivos móveis */
+        max-width: 200px; /* Define um tamanho máximo para a largura do logo */
+        margin-left: 40px; /* Move a imagem para a direita */
+        
+    }
+
+    h1.nomee {
+        margin: 10px 0; /* Adiciona uma margem ao redor do nome */
+        font-size: 20px; /* Ajusta o tamanho da fonte do nome */
+    }
+    .link-estilizado {
+
+         font-size: 10px; /* Tamanho da fonte */
+    }
+
+    .conjunto_de_imagens {
+        grid-template-columns: 1fr; /* Coluna única em dispositivos pequenos */
+    }
+
+
+    .titulo{
+        font-size: 10px;
+    }
+    body {
+        background-color: #d0d0d0;
+    }
+
+    .content {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 20px;
+        top: 2px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu li {
+        margin: 0;
+        padding: 15px 0;
+        border-top: 1px solid #444;
+    }
+
+    .menu li a {
+        font-size: 16px;
+    }
+
+    .menu_botao {
+        display: block;
+        background-color: #333;
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 20px;
+        
+    }
+}
